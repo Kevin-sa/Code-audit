@@ -64,6 +64,9 @@ class EcshopTest {
         eval(trim($content));
     }
 
+    /*
+    *Eschop SQLi测试
+    */
     public function SQliTest() {
         try {
             $var = $_SERVER['HTTP_REFERER'];
@@ -74,6 +77,9 @@ class EcshopTest {
         }
     }
 
+    /*
+    *Eschop RCE测试
+    */
     public function RCETest() {
         try {
             $var = $_SERVER['HTTP_REFERER'];
