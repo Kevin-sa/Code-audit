@@ -47,10 +47,26 @@ class DrupalTest {
         }
         $this->test_render($form);
     }
+    
+    /**
+     * Drupal 8.x rce test
+     * @param $elements
+     */
+
+    public function Drupal8_rce($elements)
+    {
+        foreach($elements['render'] as $callable) {
+            if (isset($callable)) {
+                $elements = call_user_func($callable, $elements['children']);
+            }
+        }
+    }
 
 
 }
 
-$element = array('render'=>array('exec','passthru'),'children'=>'echo $PATH','message'=>1);
+//$element = array('render'=>array('exec','passthru'),'children'=>'echo $PATH','message'=>1);
+$element = array('render'=>array('system','passthru'),'children'=>'whoami','message'=>1);
 $a = new DrupalTest();
+//$a->Drupal8_rce($element);
 $a->drupal7_rce($element);
