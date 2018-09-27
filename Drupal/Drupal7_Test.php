@@ -35,7 +35,9 @@ class DrupalTest {
             }
         }
     }
-
+    /**
+    * Drupal 7.x RCE测试
+    */
     public function drupal7_rce($element) {
         if (!isset($element['message'])) {
             $form = $this->set_error($element=$element);
