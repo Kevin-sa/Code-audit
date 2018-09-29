@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: didi
+ * User: Kevinsa
  * Date: 2018/9/28
  * Time: 下午7:45
  */
@@ -42,7 +42,10 @@ class ThinkTest{
             var_dump($e);
         }
     }
-
+    /**
+     * ThinkPHP order by 预编译sql语句拼接注入
+     * @version 5.1.22
+     */
     public function OrderTest() {
         //$field = array(' updatexml(0,concat(0xa,user()),0)');
         $field = $_GET['filed'];
