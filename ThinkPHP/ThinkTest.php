@@ -78,6 +78,7 @@ class ThinkTest{
 
     public function InTest(){
         $value = array("0,updatexml(0,concat(0xa,user()),0)"=>1);
+        //$value = $_GET['ids'];
         $this->in($value);
         $this->MysqlDb('in');
     }
