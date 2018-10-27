@@ -19,13 +19,6 @@ $filename = "phar://phar.phar/test.txt";
 file_get_contents($filename);
 
 /*
-<?php
-/**
- * Created by PhpStorm.
- * User: Kevinsa
- * Date: 2018/10/27
- * Time: 9:53 PM
- */
 
 class PharTest {
     protected $callback;
